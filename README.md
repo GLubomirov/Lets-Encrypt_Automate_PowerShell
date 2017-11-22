@@ -12,7 +12,7 @@ The script is stripped of any host ouput since it is designed to be called autom
 
 # Parameters
 
-It has three parameters:
+The Script has three parameters:
 
 domain - This is the DNS. It should be accessable from the Internet.
 
