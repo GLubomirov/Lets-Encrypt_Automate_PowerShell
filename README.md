@@ -9,8 +9,11 @@ Thanks to Rick Strahl for the initial idea - https://weblog.west-wind.com/posts/
 The script should be ran on the IIS Server.
 
 It has three parameters:
+
 domain - This is the DNS. It should be accessable from the Internet.
+
 iisSiteName - This is the Name of the Site as seen in the IIS Management Console.
+
 renew - If you are creating a Certificate for this Site for the First time this should be "False". If you are renewing a certificate set it to "True"
 
 .\PATHTOSCRIPT\Lets-Encrypt_Automate_PowerShell.ps1 -domain "reportifier.com" -iisSiteName "reportifier.com" -renew "False"
