@@ -74,7 +74,7 @@ if($aliasCheck){
 ##Functions
 ###############################################################################################
 
-####Check Request Status is Ready before continuing. Keeps checking until Status is Valid or Failed.
+####Check the Request Status is ready before continuing. Keeps checking until Status is Valid or Failed.
 function checkReqStatus {
     $statusFull = (Update-ACMEIdentifier $alias -ChallengeType http-01).Challenges
     $statusHTTP = $statusFull | where {$_.Type -eq "http-01"}
@@ -90,7 +90,7 @@ function checkReqStatus {
     }
 }
 
-####Check if Certificate is Ready before Downloading. If Certificate is not ready after 5 tries is Fails.
+####Check if Certificate is Ready before Downloading. If Certificate is not ready after 5 tries it fails.
 function checkCertStatus {
     $i++
     $certFull = update-AcmeCertificate $certname
@@ -115,15 +115,6 @@ $binding = $obj.bindings.Collection | where {(($_.protocol -eq "HTTPS") -and ($_
 
 ####Proceed only if there is no such binding or if the renew param is true
 if((!($binding)) -or ($renew -eq "True")){
-
-    ###############################################################################################
-    ##New Registration
-    ###############################################################################################
-    if($createregistration) {
-        # Set up new 'account' tied to an email address
-            New-AcmeRegistration -Contacts "$email" -AcceptTos | out-null
-            start-sleep -Seconds 2
-    }
 
     ###############################################################################################
     ##New Alias
