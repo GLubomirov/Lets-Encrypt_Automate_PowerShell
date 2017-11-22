@@ -1,8 +1,9 @@
 # Lets-Encrypt_Automate_PowerShell
 
-This PowerShell script automates the process of generating a LetsEncrypt SSL Certificate and assigning it to a IIS Site. It can create a HTTPS binding for a Site or it can Renew a current HTTPS Binding with new Certificate
+This PowerShell script automates the process of generating a LetsEncrypt SSL Certificate and assigning it to a IIS Site. It will either create an HTTPS binding for a Site or it can Renew a current HTTPS Binding with a new Certificate.
 
 It requries that ACMESharp is installed on the Server - https://github.com/ebekker/ACMESharp
+Thanks to Rick Strahl for the initial idea - https://weblog.west-wind.com/posts/2016/feb/22/using-lets-encrypt-with-iis-on-windows#TheEasyWay:LetsEncrypt-Win-Simple 
 
 The script should be ran on the IIS Server.
 
