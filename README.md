@@ -8,6 +8,10 @@ Thanks to Rick Strahl for the initial idea - https://weblog.west-wind.com/posts/
 
 The script should be ran on the IIS Server with Administrative Priviliges.
 
+The script is stripped of any host ouput since it is designed to be called automatically.
+
+# Parameters
+
 It has three parameters:
 
 domain - This is the DNS. It should be accessable from the Internet.
