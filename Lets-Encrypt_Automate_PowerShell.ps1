@@ -14,6 +14,13 @@
 ###############################################################################################
 $ErrorActionPreference = "Stop"
 
+####Check if PowerShell is ran as Administrator. IIS is not available without Admin Priviliges
+If(-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")){    
+    return "This script needs to be run As Administrator"
+    Break
+}
+
+
 ####Import ACMESharp
 try{
     import-module ACMESharp
