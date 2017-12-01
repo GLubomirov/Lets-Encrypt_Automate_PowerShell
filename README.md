@@ -29,3 +29,5 @@ iisSiteName - This is the Name of the Site as seen in the IIS Management Console
 renew - If you are creating a Certificate for this Site for the First time this should be "False". If you are renewing a certificate set it to "True"
 
 .\PATHTOSCRIPT\Lets-Encrypt_Automate_PowerShell.ps1 -domain "reportifier.com" -iisSiteName "reportifier.com" -renew "False"
+
+More Info: http://georgelubomirov.blogspot.bg/2017/11/automatic-issuance-and-renewal-of-ssl.html
