@@ -8,7 +8,7 @@ Thanks to Rick Strahl for the initial idea - https://weblog.west-wind.com/posts/
 
 The script should be ran on the IIS Server with Administrative Priviliges.
 
-You should initialize the ACME Vault and setup an ACMERegistration before running the script if you havent already. 
+You should initialize the ACME Vault and setup an ACME Registration before running the script if you havent already. 
 
 This is done through two simple commands:
 
