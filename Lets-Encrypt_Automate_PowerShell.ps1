@@ -50,9 +50,16 @@ $SiteFolder = Join-Path -Path 'C:\inetpub\wwwroot' -ChildPath $iissitename
 $initializevault = $FALSE
 $createregistration = $FALSE
 
-#Not used. Left for reference. If ACME Vault is not initialized it should be. This is a one time operation.
+#Not used. Left for Reference. If ACME Vault is not initialized it should be before running the script. This is a one time operation.
 if($initializevault) {
     Initialize-ACMEVault
+}
+
+#Not used. Left for Reference. If there is no ACME Registration you should create on before running the script. This is a one time operation.
+if($createregistration) {
+    # Set up new 'account' tied to an email address
+        New-AcmeRegistration -Contacts "$email" -AcceptTos | out-null
+        start-sleep -Seconds 2
 }
 
 ####Get Acme Vault
