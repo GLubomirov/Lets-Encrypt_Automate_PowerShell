@@ -34,4 +34,12 @@ More Info: http://georgelubomirov.blogspot.bg/2017/11/automatic-issuance-and-ren
 
 There is also a suplmentary script checking IIS Site Bindings with soon to expire certificates and calling the main script. It works best as a Task Scheduled Job.
 
+The Script is called without parameters (again to faciliate easier calling from Task Scheduler). You have to change two things directly into the script.
+
+The Path to the Main script, which is called for the bindings which will expire.
+
+The number of days since the day of running the script in which the certificates will expire.
+
+Both parameters ar ein the last 5 lines of the script.
+
 With this you wouldn't have to worry about manually renewing certificates anymore.
