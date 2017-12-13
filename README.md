@@ -32,7 +32,7 @@ renew - If you are creating a Certificate for this Site for the First time this 
 
 More Info: http://georgelubomirov.blogspot.bg/2017/11/automatic-issuance-and-renewal-of-ssl.html
 
-There is also a suplmentary script checking IIS Site Bindings with soon to expire certificates and calling the main script. It works best as a Task Scheduled Job.
+There is also a suplementary script checking IIS Site Bindings with soon to expire certificates and calling the main script. It works best as a Task Scheduled Job.
 
 The Script is called without parameters (again to faciliate easier calling from Task Scheduler). You have to change two things directly into the script.
 
