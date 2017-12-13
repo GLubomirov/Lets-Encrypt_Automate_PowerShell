@@ -31,3 +31,7 @@ renew - If you are creating a Certificate for this Site for the First time this 
 .\PATHTOSCRIPT\Lets-Encrypt_Automate_PowerShell.ps1 -domain "reportifier.com" -iisSiteName "reportifier.com" -renew "False"
 
 More Info: http://georgelubomirov.blogspot.bg/2017/11/automatic-issuance-and-renewal-of-ssl.html
+
+There is also a suplmentary script checking IIS Site Bindings with soon to expire certificates and calling the main script. It works best as a Task Scheduled Job.
+
+With this you wouldn't have to worry about manually renewing certificates anymore.
