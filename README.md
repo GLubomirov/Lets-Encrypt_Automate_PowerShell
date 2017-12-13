@@ -40,6 +40,6 @@ The Path to the Main script, which is called for the bindings which will expire.
 
 The number of days since the day of running the script in which the certificates will expire.
 
-Both parameters ar ein the last 5 lines of the script.
+Both parameters are in the last 5 lines of the script.
 
 With this you wouldn't have to worry about manually renewing certificates anymore.
