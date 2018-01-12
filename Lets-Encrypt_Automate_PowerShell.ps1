@@ -68,14 +68,23 @@ $vault = Get-ACMEVault -VaultProfile :sys
 ####Change to the Vault folder
 cd "C:\ProgramData\ACMESharp\sysVault"
 
-####Check if alias already created
-$aliasCheck = $vault.Identifiers | where {$_.Alias -eq $alias}
+####Check if alias already created. This is obsolete. Left for reference.
+#$aliasCheck = $vault.Identifiers | where {$_.Alias -eq $alias}
 
-if($aliasCheck){
-    $createalias = $FALSE
-} else {
-    $createalias = $TRUE
-}
+#if($aliasCheck){
+#    $createalias = $TRUE
+#} else {
+#    $createalias = $TRUE
+#}
+
+###Due to "authorizations for these names not found or expired" error we now create an Alias every time (for both - New Bindings and Renewals). The reason for this
+##is that the authorization for the domain is active for one month but the certificates are for 3 months, so alot of users started getting this error after trying
+##to renew their certificate after three months.
+
+$createalias = $TRUE
+
+####Generate Random Alias
+$alias = $alias +  -join ((1..10) | %{(65..90) + (97..122) | Get-Random} | % {[char]$_})
 
 ###############################################################################################
 ##Functions
